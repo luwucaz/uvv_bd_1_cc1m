@@ -54,14 +54,14 @@ Se relaciona com a tabela departamentos.</remarks>
      <remarks>Endereço da firma ou escritória da empresa.
 Inserir: Rua (ou) Avenidade (ou) Rodovia e número.</remarks>
     </column>
-    <column id="COL13" populated="true" UUID="c9ede37c-2121-4da5-a3b5-c6863501090a" autoIncrement="false" autoIncrementSequenceName="localizacoes_cep_seq" defaultValue="" name="cep" nullable="1" physicalName="cep" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL13" populated="true" UUID="c9ede37c-2121-4da5-a3b5-c6863501090a" autoIncrement="false" autoIncrementSequenceName="localizacoes_cep_seq" defaultValue="" name="cep" nullable="1" physicalName="cep" precision="15" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>CEP da firma ou escritória da empresa.
 Apenas números, sem caractéres especiais ou símbolos.</remarks>
     </column>
     <column id="COL14" populated="true" UUID="2a631b03-c4c2-42b4-bbe3-41c7348b3753" autoIncrement="false" autoIncrementSequenceName="localizacoes_cidade_seq" defaultValue="" name="cidade" nullable="1" physicalName="cidade" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Cidade (em extenso) da firma ou escritória da empresa.</remarks>
     </column>
-    <column id="COL15" populated="true" UUID="feafa223-f30a-4041-b715-cee49037de2e" autoIncrement="false" autoIncrementSequenceName="localizacoes_uf_seq" defaultValue="" name="uf" nullable="1" physicalName="uf" precision="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL15" populated="true" UUID="feafa223-f30a-4041-b715-cee49037de2e" autoIncrement="false" autoIncrementSequenceName="localizacoes_uf_seq" defaultValue="" name="uf" nullable="1" physicalName="uf" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Estado (em abreviatura) da firma ou escritória da empresa.</remarks>
     </column>
     <column id="COL16" populated="true" UUID="b4d47b3e-70cf-4605-9de2-ed684a3fbdd3" autoIncrement="false" autoIncrementSequenceName="localizacoes_id_pais_seq" defaultValue="" name="id_pais" nullable="1" physicalName="id_pais" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
@@ -88,7 +88,7 @@ Se relaciona com a tabela localizações.</remarks>
     <column id="COL21" populated="true" UUID="397e2eac-3468-42f8-81ec-6229f9cf890c" autoIncrement="false" autoIncrementSequenceName="paises_nome_seq" defaultValue="" name="nome" nullable="0" physicalName="nome" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Nome dos paises da tabela países.</remarks>
     </column>
-    <column id="COL22" populated="true" UUID="ad92a8e3-e830-48e8-952d-609dc4b2d1c4" autoIncrement="false" autoIncrementSequenceName="paises_id_regiao_seq" defaultValue="" name="id_regiao" nullable="1" physicalName="id_regiao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL22" populated="true" UUID="ad92a8e3-e830-48e8-952d-609dc4b2d1c4" autoIncrement="false" autoIncrementSequenceName="paises_id_regiao_seq" defaultValue="" name="id_regiao" nullable="0" physicalName="id_regiao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks>Chave estrangeira da tabela regiões.</remarks>
     </column>
     </folder>
@@ -295,7 +295,7 @@ Obrigatoriamnte maior que o salário mínimo.</remarks>
   <table-link relationship-ref="REL65" pkConnection="0.5176470588235295" fkConnection="0.4470588235294118" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL82" pkConnection="0.2235294117647059" fkConnection="0.43434343434343436" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
   <table-link relationship-ref="REL84" pkConnection="0.6941176470588235" fkConnection="0.38461538461538464" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL73" pkConnection="0.08032128514056225" fkConnection="0.9349112426035503" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
+  <table-link relationship-ref="REL73" pkConnection="0.08032128514056225" fkConnection="0.9526627218934911" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="36"/>
   <table-link relationship-ref="REL71" pkConnection="0.45454545454545453" fkConnection="0.5508021390374331" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="132"/>
   <table-link relationship-ref="REL69" pkConnection="0.7183098591549296" fkConnection="0.49557522123893805" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
   <table-link relationship-ref="REL75" pkConnection="0.6153846153846154" fkConnection="0.8577777777777778" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="66"/>
