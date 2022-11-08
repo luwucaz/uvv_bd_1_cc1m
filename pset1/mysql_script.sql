@@ -1,4 +1,4 @@
-CREATE DATABASE hr;
+CREATE DATABASE hr; --Teste
 
 USE hr; -- Adicionar usuário
 
