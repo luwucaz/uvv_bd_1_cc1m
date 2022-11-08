@@ -1,7 +1,7 @@
 CREATE SCHEMA hr;
 
 CREATE USER lucas;
-ALTER SCHEMA hr OWNER TO lucas; -- Adicionar usuário
+ALTER SCHEMA hr OWNER TO lucas;
 
 --
 --  CARGOS
