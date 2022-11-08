@@ -1,6 +1,6 @@
-CREATE DATABASE hr; --Teste
+CREATE DATABASE hr;
 
-USE hr; -- Adicionar usuário
+USE hr;
 
 --
 --  CARGOS
