@@ -1,7 +1,6 @@
+CREATE DATABASE hr;
 
-
-
-
+USE hr;
 
 --
 --  CARGOS
