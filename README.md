@@ -2,7 +2,7 @@
 
 Olá, me chamo Lucas Carrijo Ferrari. Este repositório foi criado com intuitio avaliativo da disciplina de _Design e Desenvolvimento de Banco de Dados_, nele você pode encontrar, por exemplo, meu **modelo físico do projeto HR (Human Resources)**, bem como sua **implementação no PostgreSQL e MySQL**.
 
-Professor: Abrantes
+- Professor: Abrantes Araújo Silva Filho 
 
 Sinta-se livre para baixar ou utilizar elas em seu estudo 📚
 
