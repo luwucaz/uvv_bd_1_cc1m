@@ -1,11 +1,10 @@
-# Apresentação 💥
+## Sobre 🔎
 
-Olá, me chamo Lucas Carrijo Ferrari. Este repositório foi criado com intuitio avaliativo da disciplina de _Design e Desenvolvimento de Banco de Dados_, nele você pode encotrar meu **modelo físico do projeto HR (Human Resources)**, bem como sua **implementação no PostgreSQL**.
+Primeiro trabalho feito e publicado aqui no GitHub. Se trata de um banco de dados voltado à visualização de um sistema de Recursos Humanos.
 
-Sinta-se livre para baixar ou utilizar elas em seu estudo 📚
-
-## Observações 🔎
-
-Os arquivos iniciais foram inseridos do dia 30 de outubro. Eu já havia desenvolvido várias outras coisas antes disso mas adicionei no Github com o intuito de ser possível fazere uma checagem no histórico de desenvolvimento.
+Inclui os seguintes arquivos:
+*cc1m_202203167_hr.architect: * Diagrama do banco de dados comentado e estruturado
+*cc1m_202203167_mysql_hr.sql:* Toda a estrutura do banco de dados criado especificamente para o MySQL
+*cc1m_202203167_postgresql_hr.sql:* Toda a estrutura do banco de dados criado especificamente para o Postgres
 
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-carrijo-ferrari-4aa93b20b/)
