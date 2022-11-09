@@ -474,6 +474,9 @@ ALTER TABLE ONLY hr.empregados
 ALTER TABLE ONLY hr.empregados
     ADD CONSTRAINT empregados_fk FOREIGN KEY (id_departamento) REFERENCES hr.departamentos(id_departamento);
 
+ALTER TABLE ONLY hr.empregados
+    ADD CONSTRAINT empregados_supervisor_fk FOREIGN KEY (id_supervisor) REFERENCES a.empregados(id_empregado);
+
 ALTER TABLE ONLY hr.historico_cargos
     ADD CONSTRAINT historico_cargos_cargos_fk FOREIGN KEY (id_cargo) REFERENCES hr.cargos(id_cargo);
 

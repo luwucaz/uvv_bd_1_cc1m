@@ -264,8 +264,8 @@ Obrigatoriamnte maior que o salário mínimo.</remarks>
    <relationship id="REL75" populated="true" UUID="82616207-9103-46f5-8e5a-2e5683593d88" deferrability="7" deleteRule="3" fk-table-ref="TAB1" fkCardinality="7" identifying="false" name="empregados_departamentos_fk" physicalName="empregados_departamentos_fk" pk-table-ref="TAB30" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP76" populated="true" UUID="aafdf3c7-171e-490f-9428-e1d8f0456942" fk-column-ref="COL5" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL31" />
    </relationship>
-   <relationship id="REL77" populated="true" UUID="718be0ce-fcf5-41ae-9ec8-d73a1981a7d9" deferrability="7" deleteRule="3" fk-table-ref="TAB45" fkCardinality="7" identifying="true" name="empregados_historico_cargos_fk" physicalName="empregados_historico_cargos_fk" pk-table-ref="TAB30" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP78" populated="true" UUID="2dcae017-fb0b-4c47-8b89-c5a171e2ce71" fk-column-ref="COL46" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL31" />
+   <relationship id="REL77" populated="true" UUID="718be0ce-fcf5-41ae-9ec8-d73a1981a7d9" deferrability="7" deleteRule="3" fk-table-ref="TAB45" fkCardinality="7" identifying="false" name="empregados_historico_cargos_fk" physicalName="empregados_historico_cargos_fk" pk-table-ref="TAB30" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP78" populated="true" UUID="50c960db-bb8d-48a6-888c-1fda10b4829e" fk-column-ref="COL46" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL31" />
    </relationship>
    <relationship id="REL79" populated="true" UUID="37fc07db-9c6c-4455-be05-25aab4397c7a" deferrability="7" deleteRule="3" fk-table-ref="TAB30" fkCardinality="7" identifying="false" name="historico_cargos_empregados_fk" physicalName="historico_cargos_empregados_fk" pk-table-ref="TAB45" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP80" populated="true" UUID="e993d756-9433-4770-b62b-21dfc68d59ab" fk-column-ref="COL31" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL46" />
@@ -282,7 +282,7 @@ Obrigatoriamnte maior que o salário mínimo.</remarks>
  <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="0.9999999999999998" viewportX="0" viewportY="223" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+ <play-pen zoom="0.9999999999999998" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
   <table-pane table-ref="TAB1" x="382" y="654" bgColor="0xb9bbf6" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB10" x="340" y="280" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
   <table-pane table-ref="TAB19" x="72" y="285" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
