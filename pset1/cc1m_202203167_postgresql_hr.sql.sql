@@ -19,14 +19,11 @@ CREATE TABLE hr.cargos (
 ALTER TABLE hr.cargos OWNER TO lucas;
 
 COMMENT ON TABLE hr.cargos IS 'Tabela de cargos, contem os cargos existentes, e seu salário minímo e máximo mensal.';
-
 COMMENT ON COLUMN hr.cargos.id_cargo IS 'Chave primária da tabela cargos.
 Se relaciona com a tabela histórico de cargos.
 Se relaciona com a tabela empregados.';
-
 COMMENT ON COLUMN hr.cargos.salario_minimo IS 'Valor do salário mensal mínimo reconhecido para o cargo.
 Obrigatoriamnte menos que o salário máximo';
-
 COMMENT ON COLUMN hr.cargos.salario_maximo IS 'Valor do salário mensal máximo reconhecido para o cargo.
 Obrigatoriamnte maior que o salário mínimo.';
 
@@ -44,12 +41,9 @@ CREATE TABLE hr.departamentos (
 ALTER TABLE hr.departamentos OWNER TO lucas;
 
 COMMENT ON TABLE hr.departamentos IS 'Tabela de departamentos, contém os dados do departamento da firma ou empresa.';
-
 COMMENT ON COLUMN hr.departamentos.nome IS 'Nome dos departamentos da tabela departamentos.
 Chave alternativa da tabela departamentos.';
-
 COMMENT ON COLUMN hr.departamentos.id_localizacao IS 'Chave estrangeira da tabela localizações.';
-
 COMMENT ON COLUMN hr.departamentos.id_gerente IS 'Chave estrangeira da tabela empregados.
 Caso exista um empregado que seja gerente, este é seu ID';
 
@@ -76,27 +70,18 @@ ALTER TABLE hr.empregados OWNER TO lucas;
 COMMENT ON COLUMN hr.empregados.id_empregado IS 'Chave primária da tabela empregados.
 Se relaciona com a tabela departamentos.
 Se relaciona com a tabela histórico de cargos (sendo uma parte de sua chave primária).';
-
 COMMENT ON COLUMN hr.empregados.nome IS 'Nome completo do empregado.';
-
 COMMENT ON COLUMN hr.empregados.email IS 'E-mail do empregado.
 Sem caractere especial (@, !, ", '', +, ...)';
-
 COMMENT ON COLUMN hr.empregados.telefone IS 'Telefone do empregado.
 Admitido adicionar o código do país e DDD).
 Sem caractere especial (@, !, ", '', +, ...).';
-
 COMMENT ON COLUMN hr.empregados.data_contratacao IS 'Data de contratação do funcionário da tabela empregados.';
-
 COMMENT ON COLUMN hr.empregados.id_cargo IS 'Chave estrangeira da tabela cargos.';
-
 COMMENT ON COLUMN hr.empregados.salario IS 'Valor do salário mensal do empregado.';
-
 COMMENT ON COLUMN hr.empregados.comissao IS 'Porcentagem (em decimal) da comissão de um empregado.
 Admitido departamento de vendas apenas.';
-
 COMMENT ON COLUMN hr.empregados.id_departamento IS 'Chave estrangeira da tabela departamentos.';
-
 COMMENT ON COLUMN hr.empregados.id_supervisor IS 'Chave de autorelacionamento da tabela empregados. Indica o supervisor direto do empregado.';
 
 --
@@ -114,14 +99,10 @@ CREATE TABLE hr.historico_cargos (
 ALTER TABLE hr.historico_cargos OWNER TO lucas;
 
 COMMENT ON TABLE hr.historico_cargos IS 'Tabela de histórico de cargos, contém o histórico de cargos de um determinado empregado. Mudanças de departamento ou cargos devem ser inseridas em novas linhas.';
-
 COMMENT ON COLUMN hr.historico_cargos.data_inicial IS 'Parte da chave primária da tabela histórico de cargos.
 Obrigatoriamente menor que a data final.';
-
 COMMENT ON COLUMN hr.historico_cargos.data_final IS 'Data final do empregado no cargo. Obrigatoriamente maior que a data inicial.';
-
 COMMENT ON COLUMN hr.historico_cargos.id_cargo IS 'Chave estrangeira da tabela cargos.';
-
 COMMENT ON COLUMN hr.historico_cargos.id_departamento IS 'Chave estrangeira da tabela departamentos.';
 
 --
@@ -141,20 +122,14 @@ ALTER TABLE hr.localizacoes OWNER TO lucas;
 
 COMMENT ON TABLE hr.localizacoes IS 'Chave primária da tabela regiões.
 Se relaciona com a tabela departamentos.';
-
 COMMENT ON COLUMN hr.localizacoes.id_localizacao IS 'Chave primária da tabela regiões.
 Se relaciona com a tabela departamentos.';
-
 COMMENT ON COLUMN hr.localizacoes.endereco IS 'Endereço da firma ou escritória da empresa.
 Inserir: Rua (ou) Avenidade (ou) Rodovia e número.';
-
 COMMENT ON COLUMN hr.localizacoes.cep IS 'CEP da firma ou escritória da empresa.
 Apenas números, sem caractéres especiais ou símbolos.';
-
 COMMENT ON COLUMN hr.localizacoes.cidade IS 'Cidade (em extenso) da firma ou escritória da empresa.';
-
 COMMENT ON COLUMN hr.localizacoes.uf IS 'Estado (em abreviatura) da firma ou escritória da empresa.';
-
 COMMENT ON COLUMN hr.localizacoes.id_pais IS 'Chave estrangeira da tabela países.';
 
 --
@@ -170,10 +145,8 @@ CREATE TABLE hr.paises (
 ALTER TABLE hr.paises OWNER TO lucas;
 
 COMMENT ON TABLE hr.paises IS 'Tabela de países, contém as informações dos países, com seu nome e ID.';
-
 COMMENT ON COLUMN hr.paises.id_pais IS 'Chave primária da tabela países.
 Se relaciona com a tabela localizações.';
-
 COMMENT ON COLUMN hr.paises.nome IS 'Nome dos paises da tabela países.';
 
 --
@@ -188,9 +161,7 @@ CREATE TABLE hr.regioes (
 ALTER TABLE hr.regioes OWNER TO postgres;
 
 COMMENT ON TABLE hr.regioes IS 'Tabela de regiões, contém nome da região e seu ID.';
-
 COMMENT ON COLUMN hr.regioes.id_regiao IS 'Chave primária da tabela regiões.';
-
 COMMENT ON COLUMN hr.regioes.nome IS 'Nome das regiões da tabela regiões.';
 
 --
@@ -216,7 +187,6 @@ INSERT INTO hr.cargos VALUES ('MK_MAN', 'Marketing Manager', 9000.00, 15000.00);
 INSERT INTO hr.cargos VALUES ('MK_REP', 'Marketing Representative', 4000.00, 9000.00);
 INSERT INTO hr.cargos VALUES ('HR_REP', 'Human Resources Representative', 4000.00, 9000.00);
 INSERT INTO hr.cargos VALUES ('PR_REP', 'Public Relations Representative', 4500.00, 10500.00);
-
 
 
 INSERT INTO hr.departamentos VALUES (10, 'Administration', 1700, 200);
@@ -246,7 +216,6 @@ INSERT INTO hr.departamentos VALUES (240, 'Government Sales', 1700, NULL);
 INSERT INTO hr.departamentos VALUES (250, 'Retail Sales', 1700, NULL);
 INSERT INTO hr.departamentos VALUES (260, 'Recruiting', 1700, NULL);
 INSERT INTO hr.departamentos VALUES (270, 'Payroll', 1700, NULL);
-
 
 
 INSERT INTO hr.empregados VALUES (198, 'Donald OConnell', 'DOCONNEL', '650.507.9833', '2007-06-21', 'SH_CLERK', 2600, NULL, 50, 124);
@@ -358,7 +327,6 @@ INSERT INTO hr.empregados VALUES (178, 'Kimberely Grant', 'KGRANT', '011.44.1644
 INSERT INTO hr.empregados VALUES (179, 'Charles Johnson', 'CJOHNSON', '011.44.1644.429262', '2008-01-04', 'SA_REP', 6200, 0.10, 80, 149);
 
 
-
 INSERT INTO hr.historico_cargos VALUES (102, '2001-01-13', '2006-07-24', 'IT_PROG', 60);
 INSERT INTO hr.historico_cargos VALUES (101, '1997-09-21', '2001-10-27', 'AC_ACCOUNT', 110);
 INSERT INTO hr.historico_cargos VALUES (101, '2001-10-28', '2005-03-15', 'AC_MGR', 110);
@@ -369,7 +337,6 @@ INSERT INTO hr.historico_cargos VALUES (200, '1995-09-17', '2001-06-17', 'AD_ASS
 INSERT INTO hr.historico_cargos VALUES (176, '2006-03-24', '2006-12-31', 'SA_REP', 80);
 INSERT INTO hr.historico_cargos VALUES (176, '2007-01-01', '2007-12-31', 'SA_MAN', 80);
 INSERT INTO hr.historico_cargos VALUES (200, '2002-07-01', '2006-12-31', 'AC_ACCOUNT', 90);
-
 
 
 INSERT INTO hr.localizacoes VALUES (1000, '1297 Via Cola di Rie', '00989', 'Roma', NULL, 'IT');
@@ -397,7 +364,6 @@ INSERT INTO hr.localizacoes VALUES (3100, 'Pieter Breughelstraat 837', '3029SK',
 INSERT INTO hr.localizacoes VALUES (3200, 'Mariano Escobedo 9991', '11932', 'Mexico City', 'Distrito Federal,', 'MX');
 
 
-
 INSERT INTO hr.paises VALUES ('BE', 'Belgium', 1);
 INSERT INTO hr.paises VALUES ('IT', 'Italy', 1);
 INSERT INTO hr.paises VALUES ('JP', 'Japan', 3);
@@ -423,7 +389,6 @@ INSERT INTO hr.paises VALUES ('DK', 'Denmark', 1);
 INSERT INTO hr.paises VALUES ('ML', 'Malaysia', 3);
 INSERT INTO hr.paises VALUES ('NG', 'Nigeria', 4);
 INSERT INTO hr.paises VALUES ('AR', 'Argentina', 2);
-
 
 
 INSERT INTO hr.regioes VALUES (4, 'Middle East and Africa');
@@ -491,6 +456,3 @@ ALTER TABLE ONLY hr.localizacoes
 
 ALTER TABLE ONLY hr.paises
     ADD CONSTRAINT paises_fk FOREIGN KEY (id_regiao) REFERENCES hr.regioes(id_regiao);
-
-
-

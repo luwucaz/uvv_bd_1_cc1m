@@ -66,7 +66,6 @@ CREATE TABLE `localizacoes` (
   `id_pais` char(2) DEFAULT NULL COMMENT 'Chave estrangeira da tabela países.'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabela de localizaçõs, contém os endereços da firma ou escritório. Não armazena dados de clientes ou empregados.';
 
-
 --
 --  PAISES
 --
@@ -77,8 +76,6 @@ CREATE TABLE `paises` (
   `id_regiao` int(11) NOT NULL COMMENT 'Chave estrangeira da tabela regiões.'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabela de países, contém as informações dos países, com seu nome e ID.';
 
-
-
 --
 --  REGIOES
 --
@@ -87,8 +84,6 @@ CREATE TABLE `regioes` (
   `id_regiao` int(11) NOT NULL COMMENT 'Chave primária da tabela regiões.\r\nSe relaciona com a tabela países.',
   `nome` varchar(25) NOT NULL COMMENT 'Nome das regiões da tabela regiões.'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabela de regiões, contém nome da região e seu ID.';
-
-
 
 --
 --  INSERÇÃO DE DADOS
@@ -113,7 +108,6 @@ INSERT INTO cargos VALUES ('MK_MAN', 'Marketing Manager', 9000.00, 15000.00);
 INSERT INTO cargos VALUES ('MK_REP', 'Marketing Representative', 4000.00, 9000.00);
 INSERT INTO cargos VALUES ('HR_REP', 'Human Resources Representative', 4000.00, 9000.00);
 INSERT INTO cargos VALUES ('PR_REP', 'Public Relations Representative', 4500.00, 10500.00);
-
 
 
 INSERT INTO departamentos VALUES (10, 'Administration', 1700, 200);
@@ -143,7 +137,6 @@ INSERT INTO departamentos VALUES (240, 'Government Sales', 1700, NULL);
 INSERT INTO departamentos VALUES (250, 'Retail Sales', 1700, NULL);
 INSERT INTO departamentos VALUES (260, 'Recruiting', 1700, NULL);
 INSERT INTO departamentos VALUES (270, 'Payroll', 1700, NULL);
-
 
 
 INSERT INTO empregados VALUES (198, 'Donald OConnell', 'DOCONNEL', '650.507.9833', '2007-06-21', 'SH_CLERK', 2600, NULL, 50, 124);
@@ -255,7 +248,6 @@ INSERT INTO empregados VALUES (178, 'Kimberely Grant', 'KGRANT', '011.44.1644.42
 INSERT INTO empregados VALUES (179, 'Charles Johnson', 'CJOHNSON', '011.44.1644.429262', '2008-01-04', 'SA_REP', 6200, 0.10, 80, 149);
 
 
-
 INSERT INTO historico_cargos VALUES (102, '2001-01-13', '2006-07-24', 'IT_PROG', 60);
 INSERT INTO historico_cargos VALUES (101, '1997-09-21', '2001-10-27', 'AC_ACCOUNT', 110);
 INSERT INTO historico_cargos VALUES (101, '2001-10-28', '2005-03-15', 'AC_MGR', 110);
@@ -266,7 +258,6 @@ INSERT INTO historico_cargos VALUES (200, '1995-09-17', '2001-06-17', 'AD_ASST',
 INSERT INTO historico_cargos VALUES (176, '2006-03-24', '2006-12-31', 'SA_REP', 80);
 INSERT INTO historico_cargos VALUES (176, '2007-01-01', '2007-12-31', 'SA_MAN', 80);
 INSERT INTO historico_cargos VALUES (200, '2002-07-01', '2006-12-31', 'AC_ACCOUNT', 90);
-
 
 
 INSERT INTO localizacoes VALUES (1000, '1297 Via Cola di Rie', '00989', 'Roma', NULL, 'IT');
@@ -292,7 +283,6 @@ INSERT INTO localizacoes VALUES (2900, '20 Rue des Corps-Saints', '1730', 'Genev
 INSERT INTO localizacoes VALUES (3000, 'Murtenstrasse 921', '3095', 'Bern', 'BE', 'CH');
 INSERT INTO localizacoes VALUES (3100, 'Pieter Breughelstraat 837', '3029SK', 'Utrecht', 'Utrecht', 'NL');
 INSERT INTO localizacoes VALUES (3200, 'Mariano Escobedo 9991', '11932', 'Mexico City', 'Distrito Federal,', 'MX');
-
 
 
 INSERT INTO paises VALUES ('BE', 'Belgium', 1);
@@ -322,7 +312,6 @@ INSERT INTO paises VALUES ('NG', 'Nigeria', 4);
 INSERT INTO paises VALUES ('AR', 'Argentina', 2);
 
 
-
 INSERT INTO regioes VALUES (4, 'Middle East and Africa');
 INSERT INTO regioes VALUES (1, 'Europe');
 INSERT INTO regioes VALUES (2, 'Americas');
@@ -331,7 +320,6 @@ INSERT INTO regioes VALUES (3, 'Asia');
 --
 --  CHAVES PRIMARIAS E ESTRANGEIRAS
 --
-
 
 ALTER TABLE cargos
     ADD CONSTRAINT cargos_pk PRIMARY KEY (id_cargo);
@@ -389,4 +377,3 @@ CREATE UNIQUE INDEX departamentos_nome_IDX USING BTREE ON departamentos (nome);
 CREATE UNIQUE INDEX empregados_nome_IDX USING BTREE ON empregados (nome);
 
 CREATE UNIQUE INDEX cargos_cargo_IDX USING BTREE ON cargos (cargo);
-
