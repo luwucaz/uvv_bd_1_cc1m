@@ -1,5 +1,9 @@
 CREATE DATABASE hr;
 
+CREATE USER 'lucas'@localhost identified by '202203167';
+
+GRANT ALL ON hr.* TO 'lucas'@localhost;
+
 USE hr;
 
 --
