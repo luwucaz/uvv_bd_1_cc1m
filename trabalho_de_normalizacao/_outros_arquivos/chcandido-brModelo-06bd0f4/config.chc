@@ -1,0 +1,16 @@
+#Config
+#Tue Nov 22 15:56:17 BRT 2022
+cfg.ancorador=true
+cfg.autosalvarintervalo=5
+cfg.mostrargrade=true
+cfg.apagartextoaoeditar=true
+cfg.location.y=-8
+cfg.location.x=-8
+cfg.mostrardimensoesaomover=true
+cfg.gradelargura=23
+cfg.mostrartooltips=true
+cfg.tipodefault=0
+cfg.mostrarids=false
+cfg.recentes=d\:\\usu\u00E1rios\\lucas\\Desktop\\Conceitual_1.brM3
+cfg.location.salvar=true
+cfg.propaguedeletetolines=true
