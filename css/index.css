@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background-image: url(../images/kay-ingulli-QhB2HYaFEO0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  width: 100%;
+  height: 40vw;
+}
+
+#topo {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+#topo img {
+  width: 30vw;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-right: 60px;
+}
+
+#menu li a {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#cadastrar {
+  background: linear-gradient(99.52deg, #9cfeb7 0%, #446850 97.3%);
+  border-radius: 42.2054px;
+  padding: 21px 52px;
+}
+
+#login {
+  background: linear-gradient(99.52deg, #425f57 0%, #749f82 97.3%);
+  border-radius: 42.2054px;
+  padding: 21px 52px;
+}
+
+header h1 {
+  font-size: 5vw;
+  text-align: center;
+}
+
+header span {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin: 0;
+}
+
+#sobre_1 {
+  background-color: #102716;
+  color: white;
+  padding: 100px;
+}
+
+#sobre_1 article {
+  max-width: 50%;
+}
+
+#sobre_2 {
+  background-color: #0a1b0e;
+  color: white;
+  padding: 100px;
+}
+
+#imagens {
+  display: flex;
+  gap: 20px;
+}
+
+.imagem_com_texto {
+  position: relative;
+}
+
+.imagem_com_texto p {
+  padding: 0 50px;
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#imagem1 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/mulher.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#imagem2 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#imagem3 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/elly-filho-prFmxl4FPP4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#imagem4 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/elly-filho-prFmxl4FPP4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#imagem5 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/elly-filho-prFmxl4FPP4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#imagem6 {
+  width: 350px;
+  height: 580px;
+  background-image: url(../images/elly-filho-prFmxl4FPP4-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#integrantes {
+  background-color: #102716;
+  color: white;
+  padding: 100px;
+}
+
+footer {
+  background-image: url(../images/giovana-gomes-HOtqiF2u9x0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  padding: 50px;
+}
+
+footer h1 {
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 20px;
+}
+
+#informacoes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#creditos {
+  text-align: center;
+  background-color: #102716;
+  padding: 20px;
+  color: white;
+}
+
+#creditos p {
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+#creditos a {
+  color: darkseagreen;
+}
+
+#creditos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
