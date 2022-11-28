@@ -1,23 +1,11 @@
-# NowRecycle ♻️
+# Apresentação 💥
 
-Esta foi uma pequena página desenvolvido pelo nosso grupo para a disciplina de Desenvolvimento Web. O site tem como intuito fornecer uma coleta de materiais que iriam ao descarte comum para serem recicladas.
+Este repositório foi criado com intuito avaliativo da disciplina de _Design e Desenvolvimento de Banco de Dados_, nele você pode encontrar, por exemplo, meu **modelo físico do projeto HR (Human Resources)**, bem como sua **implementação no PostgreSQL e MySQL**.
 
-## Integrantes 🔎
+- Professor: Abrantes Araújo Silva Filho 
 
-- Lucas Carrijo Ferrari
-- Rayssa Kellen Gomes Martins
-- Marco Antônio da Silva Alves
+Sinta-se livre para baixar ou utilizar elas em seu estudo 📚
 
-## Links úteis 🔗
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-carrijo-ferrari-4aa93b20b/)
 
-- A página funcionando pode ser visualizada clicando [aqui](https://luwucaz.github.io/projetointegrado_nowrecycle/)
-- O protótipo feito no Figma pode ser encontrado por [este link](https://bit.ly/3GoMou9)
 
-### Credits
-
-*I would like to shoutout these creators for the images that were used at this project:*
-
-- [Kay Ingulli](https://unsplash.com/@kingulli?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-- [Giovana Gomes](https://unsplash.com/es/@gimazzarello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-- [Christin Hume](https://unsplash.com/@christinhumephoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-- [Elly Filho](https://unsplash.com/@ellyfilho?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
