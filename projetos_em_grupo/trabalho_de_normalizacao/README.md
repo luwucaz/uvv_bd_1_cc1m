@@ -11,5 +11,5 @@
 
 Este sub-diretório contêm:
 
-- **projeto_logico:** Projeo lógico no SQL Power Architect
+- **projeto_logico:** Projeto lógico no SQL Power Architect
 - **script_postgres.sql:** Script do projeto de jogo específico para o PostgreSQL
