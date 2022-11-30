@@ -6,6 +6,14 @@ CREATE SCHEMA jogo;
 -- TABELAS
 --
 
+
+CREATE TABLE jogo.valencia (
+                id_valencia VARCHAR NOT NULL,
+                valencia VARCHAR NOT NULL,
+                CONSTRAINT valencia_pk PRIMARY KEY (id_valencia)
+);
+
+
 CREATE TABLE jogo.configuracao (
                 id_configuracao VARCHAR NOT NULL,
                 volume VARCHAR NOT NULL,
@@ -14,22 +22,24 @@ CREATE TABLE jogo.configuracao (
 );
 
 
-CREATE TABLE jogo.imagens_fundo (
+CREATE TABLE jogo.cores (
                 id_configuracao VARCHAR NOT NULL,
-                imagem_de_fundo VARCHAR NOT NULL
+                cor VARCHAR NOT NULL,
+                CONSTRAINT cores_pk PRIMARY KEY (id_configuracao)
 );
 
 
-CREATE TABLE jogo.cores (
+CREATE TABLE jogo.imagens_fundo (
                 id_configuracao VARCHAR NOT NULL,
-                cor VARCHAR NOT NULL
+                imagem_de_fundo VARCHAR NOT NULL,
+                CONSTRAINT imagens_fundo_pk PRIMARY KEY (id_configuracao)
 );
 
 
 CREATE TABLE jogo.trilha_sonora (
                 id_trilha_sonora VARCHAR NOT NULL,
                 nome VARCHAR NOT NULL,
-                valencia VARCHAR NOT NULL,
+                id_valencia VARCHAR NOT NULL,
                 CONSTRAINT trilha_sonora_pk PRIMARY KEY (id_trilha_sonora)
 );
 
@@ -99,63 +109,76 @@ CREATE TABLE jogo.jogo (
 
 
 CREATE TABLE jogo.personalizacao (
+                id_configuracao VARCHAR NOT NULL,
+                id_jogo VARCHAR NOT NULL,
                 data_da_configuracao DATE NOT NULL,
                 hora TIME NOT NULL,
                 cor VARCHAR NOT NULL,
                 brilho VARCHAR NOT NULL,
                 som VARCHAR NOT NULL,
                 imagem VARCHAR NOT NULL,
-                id_configuracao VARCHAR NOT NULL,
-                id_jogo VARCHAR NOT NULL
+                CONSTRAINT personalizacao_pk PRIMARY KEY (id_configuracao, id_jogo)
 );
 
 
 CREATE TABLE jogo.nivel_personagem (
                 id_nivel VARCHAR NOT NULL,
-                id_personagem VARCHAR NOT NULL
+                id_personagem VARCHAR NOT NULL,
+                CONSTRAINT nivel_personagem_pk PRIMARY KEY (id_nivel, id_personagem)
 );
 
 
 CREATE TABLE jogo.composicao (
+                id_nivel VARCHAR NOT NULL,
+                id_objeto VARCHAR NOT NULL,
                 posicao_inicial VARCHAR NOT NULL,
                 pontos INTEGER NOT NULL,
-                id_nivel VARCHAR NOT NULL,
-                id_objeto VARCHAR NOT NULL
+                CONSTRAINT composicao_pk PRIMARY KEY (id_nivel, id_objeto)
 );
 
 
 CREATE TABLE jogo.trilha_sonora_nivel (
                 id_nivel VARCHAR NOT NULL,
-                id_trilha_sonora VARCHAR NOT NULL
+                id_trilha_sonora VARCHAR NOT NULL,
+                CONSTRAINT trilha_sonora_nivel_pk PRIMARY KEY (id_nivel, id_trilha_sonora)
 );
 
 
 CREATE TABLE jogo.missao_nivel (
                 id_nivel VARCHAR NOT NULL,
-                id_missao VARCHAR NOT NULL
+                id_missao VARCHAR NOT NULL,
+                CONSTRAINT missao_nivel_pk PRIMARY KEY (id_nivel, id_missao)
 );
 
 
 CREATE TABLE jogo.partidas (
+                id_jogador VARCHAR NOT NULL,
+                id_nivel VARCHAR NOT NULL,
                 data_de_inicio DATE NOT NULL,
                 data_de_fim DATE NOT NULL,
                 hora_de_inicio TIME NOT NULL,
                 hora_de_fim TIME NOT NULL,
                 pontuacao INTEGER NOT NULL,
-                id_jogador VARCHAR NOT NULL,
-                id_nivel VARCHAR NOT NULL
+                CONSTRAINT partidas_pk PRIMARY KEY (id_jogador, id_nivel)
 );
 
 
 CREATE TABLE jogo.cenario_nivel (
                 id_nivel VARCHAR NOT NULL,
-                id_cenario VARCHAR NOT NULL
+                id_cenario VARCHAR NOT NULL,
+                CONSTRAINT cenario_nivel_pk PRIMARY KEY (id_nivel, id_cenario)
 );
-
 
 --
 -- CHAVES
 --
+
+ALTER TABLE jogo.trilha_sonora ADD CONSTRAINT valencia_trilha_sonora_fk
+FOREIGN KEY (id_valencia)
+REFERENCES jogo.valencia (id_valencia)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE;
 
 ALTER TABLE jogo.personalizacao ADD CONSTRAINT configuracao_personalizacao_fk
 FOREIGN KEY (id_configuracao)
@@ -164,14 +187,14 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE jogo.cores ADD CONSTRAINT configuracao_cores_fk
+ALTER TABLE jogo.imagens_fundo ADD CONSTRAINT configuracao_imagens_fundo_fk
 FOREIGN KEY (id_configuracao)
 REFERENCES jogo.configuracao (id_configuracao)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
-ALTER TABLE jogo.imagens_fundo ADD CONSTRAINT configuracao_imagens_fundo_fk
+ALTER TABLE jogo.cores ADD CONSTRAINT configuracao_cores_fk
 FOREIGN KEY (id_configuracao)
 REFERENCES jogo.configuracao (id_configuracao)
 ON DELETE NO ACTION
