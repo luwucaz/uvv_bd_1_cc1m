@@ -1,0 +1,80 @@
+0    [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ArchitectUtils  - Log4J configured successfully
+744  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+845  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+846  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Beginning to read/merge new pl.ini data
+916  [AWT-EventQueue-0] INFO  ca.sqlpower.sql.PlDotIni  - Finished reading file.
+9326 [Thread-5] ERROR ca.sqlpower.architect.swingui.action.CheckForUpdateAction  - Fail to retrieve current version number!
+14625 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+CREATE TABLE tipo_lixo (
+                id_tipo_lixo VARCHAR NOT NULL,
+                tipo VARCHAR NOT NULL
+)
+14626 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE veiculos (
+                id_veiculo VARCHAR NOT NULL,
+                placa VARCHAR NOT NULL,
+                descricao VARCHAR NOT NULL,
+                ativo VARCHAR NOT NULL
+)
+14627 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE atendimento (
+                id_pedido VARCHAR NOT NULL,
+                id_funcionario VARCHAR NOT NULL,
+                id_veiculo VARCHAR NOT NULL,
+                data_atendimento VARCHAR NOT NULL,
+                coleta_finalizada VARCHAR NOT NULL,
+                ativo VARCHAR NOT NULL,
+                visita_feita VARCHAR NOT NULL,
+                obs VARCHAR NOT NULL,
+                id_tipo_lixo VARCHAR NOT NULL
+)
+14627 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE cliente (
+                id_cliente VARCHAR NOT NULL,
+                cpf VARCHAR NOT NULL,
+                nome VARCHAR NOT NULL,
+                email VARCHAR NOT NULL,
+                senha VARCHAR NOT NULL,
+                telefone VARCHAR NOT NULL,
+                ativo VARCHAR NOT NULL,
+                CONSTRAINT cliente_pk PRIMARY KEY (id_cliente)
+)
+14628 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+CREATE TABLE endereco (
+                id_endereco VARCHAR NOT NULL,
+                id_cliente VARCHAR NOT NULL,
+                data_solicitacao VARCHAR NOT NULL,
+                data_pedido VARCHAR NOT NULL,
+                hora_inicial VARCHAR NOT NULL,
+                hora_final VARCHAR NOT NULL,
+                atendido VARCHAR NOT NULL,
+                ativo VARCHAR NOT NULL,
+                CONSTRAINT endereco_pk PRIMARY KEY (id_endereco)
+)
+14628 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.ddl.GenericDDLGenerator  - endStatement: 
+
+
+ALTER TABLE endereco ADD CONSTRAINT cliente_endereco_fk
+FOREIGN KEY (id_cliente)
+REFERENCES cliente (id_cliente)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION
+NOT DEFERRABLE
+14633 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.SQLScriptDialog  - The list size is :6
+736722 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+736727 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+736728 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+736728 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+736728 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+737165 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+737166 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+737167 [AWT-EventQueue-0] INFO  ca.sqlpower.object.undo.PropertyChangeEdit  - Found setter: setLengths
+940537 [AWT-EventQueue-0] INFO  ca.sqlpower.architect.swingui.PlayPen  - Drop: I am over dtde=java.awt.dnd.DropTargetDropEvent[source=java.awt.dnd.DropTarget@649805d7]
